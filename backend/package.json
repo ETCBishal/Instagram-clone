@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "nodemon backend/src/index.js",
+    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "cd backend && node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,6 @@
     "cloudinary": "^2.6.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "devconnector": "file:..",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",

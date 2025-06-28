@@ -18,6 +18,9 @@ import SavedPage from "./pages/SavedPage";
 function App() {
   const { isCheckingAuth, authUser, checkAuth } = useAuthStore();
 
+  console.log(authUser)
+  
+
   useEffect(() => {
     checkAuth();
   }, []);
