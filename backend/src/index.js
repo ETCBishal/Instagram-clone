@@ -25,7 +25,7 @@ app.use(cors({
 app.use('/api/auth', authRoute)
 app.use('/api/post', postRoute)
 
-if (process.env.NODE_MODE !== 'development') {
+if (process.env.NODE_ENV !== 'development') {
     app.use(express.static(path.join(__dirname, '../frontend/dist')))
 
     app.get('*', (req, res) => {
